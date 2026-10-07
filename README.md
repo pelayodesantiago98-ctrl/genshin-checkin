@@ -110,13 +110,6 @@ de fallar en silencio. Cuando lo veas, repite el paso 1 (sacar cookies
 nuevas) y el paso 2 (sobrescribir `GENSHIN_COOKIES`); no hace falta tocar
 nada más.
 
-## Lo que este proyecto no hace
-
-No juega por ti. Las misiones diarias, comisiones, cofres, combates — todo
-eso sigue haciéndolo falta una persona delante del juego. Un bot que
-jugara solo sería trampas de verdad, con riesgo real de que te baneen la
-cuenta; este script sólo llama a una API pública de recompensas con las
-cookies de tu propia sesión, sin tocar ninguna partida.
 
 ## Licencia
 
