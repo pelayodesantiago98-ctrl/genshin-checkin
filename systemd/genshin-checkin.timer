@@ -1,0 +1,12 @@
+# Una vez al dia. Persistent=true: si el VPS estaba apagado a esa hora,
+# se lanza en cuanto arranca en vez de esperar al dia siguiente.
+[Unit]
+Description=Programa diaria del check-in de HoYoLAB
+
+[Timer]
+OnCalendar=*-*-* 09:05:00
+Persistent=true
+Unit=genshin-checkin.service
+
+[Install]
+WantedBy=timers.target

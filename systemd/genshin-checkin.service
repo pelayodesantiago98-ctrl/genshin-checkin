@@ -1,0 +1,16 @@
+# genshin-checkin.service
+#
+# Reclama la recompensa diaria de HoYoLAB. Las cookies de la cuenta viven en
+# /root/.genshin/credentials.env (solo root puede leerlo), conseguidas
+# iniciando sesion a mano una vez en hoyolab.com -- ver vps-lepayimio.md.
+[Unit]
+Description=Check-in diario de HoYoLAB (recompensa por iniciar sesion)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+EnvironmentFile=/root/.genshin/credentials.env
+ExecStart=/usr/local/lib/lepayimio/genshin-checkin/venv/bin/python /usr/local/lib/lepayimio/genshin-checkin/checkin.py
+StandardOutput=journal
+StandardError=journal
